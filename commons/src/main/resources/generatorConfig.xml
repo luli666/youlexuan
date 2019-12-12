@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <context id="test" targetRuntime="MyBatis3">
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin"></plugin>
+        <commentGenerator>
+            <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+        <!--数据库链接URL，用户名、密码 -->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/youlexuandb" userId="root"
+                        password="root">
+        </jdbcConnection>
+        <javaTypeResolver>
+            <!-- This property is used to specify whether MyBatis Generator should
+                force the use of java.math.BigDecimal for DECIMAL and NUMERIC fields, -->
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+        <!-- 生成模型的包名和位置 -->
+        <javaModelGenerator targetPackage="com.luli.code.pojo"
+                            targetProject="target">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+        <!-- 生成映射文件的包名和位置 -->
+        <sqlMapGenerator targetPackage="com.luli.code.mapper"
+                         targetProject="target">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+        <!-- 生成DAO的包名和位置 -->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.luli.code.mapper" implementationPackage="service"
+                             targetProject="target">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+        <!-- 要生成哪些表 -->
+        <table schema="" tableName="tb_order" domainObjectName="Order"/>
+        <table schema="" tableName="tb_order_item" domainObjectName="OrderItem"/>
+        <table schema="" tableName="tb_address" domainObjectName="Address"/>
+        <table schema="" tableName="tb_areas" domainObjectName="Areas"/>
+        <table schema="" tableName="tb_cities" domainObjectName="Cities"/>
+        <table schema="" tableName="tb_provinces" domainObjectName="Provinces"/>
+        <table schema="" tableName="tb_content" domainObjectName="Content"/>
+        <table schema="" tableName="tb_content_category" domainObjectName="ContentCategory"/>
+        <table schema="" tableName="tb_pay_log" domainObjectName="PayLog"/>
+        <table schema="" tableName="tb_seller" domainObjectName="Seller"/>
+        <table schema="" tableName="tb_user" domainObjectName="User"/>
+        <table schema="" tableName="tb_brand" domainObjectName="Brand"/>
+        <table schema="" tableName="tb_goods" domainObjectName="Goods"/>
+        <table schema="" tableName="tb_goods_desc" domainObjectName="GoodsDesc"/>
+        <table schema="" tableName="tb_specification" domainObjectName="Specification"/>
+        <table schema="" tableName="tb_specification_option" domainObjectName="SpecificationOption"/>
+        <table schema="" tableName="tb_type_template" domainObjectName="TypeTemplate"/>
+        <table schema="" tableName="tb_freight_template" domainObjectName="FreightTemplate"/>
+        <table schema="" tableName="tb_item_cat" domainObjectName="ItemCat"/>
+        <table schema="" tableName="tb_item" domainObjectName="Item"/>
+        <table schema="" tableName="tb_seckill_goods" domainObjectName="SeckillGoods"/>
+        <table schema="" tableName="tb_seckill_order" domainObjectName="SeckillOrder"/>
+<!--
+        <table schema="" tableName="tb_order" domainObjectName="order.Order"/>
+        <table schema="" tableName="tb_order_item" domainObjectName="order.OrderItem"/>
+        <table schema="" tableName="tb_address" domainObjectName="address.Address"/>
+        <table schema="" tableName="tb_areas" domainObjectName="address.Areas"/>
+        <table schema="" tableName="tb_cities" domainObjectName="address.Cities"/>
+        <table schema="" tableName="tb_provinces" domainObjectName="address.Provinces"/>
+        <table schema="" tableName="tb_content" domainObjectName="ad.Content"/>
+        <table schema="" tableName="tb_content_category" domainObjectName="ad.ContentCategory"/>
+        <table schema="" tableName="tb_pay_log" domainObjectName="log.PayLog"/>
+        <table schema="" tableName="tb_seller" domainObjectName="seller.Seller"/>
+        <table schema="" tableName="tb_user" domainObjectName="user.User"/>
+        <table schema="" tableName="tb_brand" domainObjectName="good.Brand"/>
+        <table schema="" tableName="tb_goods" domainObjectName="good.Goods"/>
+        <table schema="" tableName="tb_goods_desc" domainObjectName="good.GoodsDesc"/>
+        <table schema="" tableName="tb_specification" domainObjectName="specification.Specification"/>
+        <table schema="" tableName="tb_specification_option" domainObjectName="specification.SpecificationOption"/>
+        <table schema="" tableName="tb_type_template" domainObjectName="template.TypeTemplate"/>
+        <table schema="" tableName="tb_freight_template" domainObjectName="template.FreightTemplate"/>
+        <table schema="" tableName="tb_item_cat" domainObjectName="item.ItemCat"/>
+        <table schema="" tableName="tb_item" domainObjectName="item.Item"/>
+        <table schema="" tableName="tb_seckill_goods" domainObjectName="seckill.SeckillGoods"/>
+        <table schema="" tableName="tb_seckill_order" domainObjectName="seckill.SeckillOrder"/>
+-->
+
+    </context>
+
+</generatorConfiguration>

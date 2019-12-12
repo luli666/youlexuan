@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="alidayu" />
+        <module name="casclient" />
+        <module name="casclient_demo01" />
+        <module name="casclient_demo02" />
+        <module name="commons" />
+        <module name="dao" />
+        <module name="interface" />
+        <module name="pojo" />
+        <module name="service_buy" />
+        <module name="service_page" />
+        <module name="service_search" />
+        <module name="service_sellgoods" />
+        <module name="service_user" />
+        <module name="solr" />
+        <module name="SpringTaskDemo" />
+        <module name="web_manager" />
+        <module name="web_portal" />
+        <module name="web_shop" />
+        <module name="web_user" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>
